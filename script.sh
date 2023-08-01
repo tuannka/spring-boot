@@ -36,4 +36,4 @@ artifact=$(echo "$name" | sed 's/-//g')
 name=$(echo "$name" | sed 's/-/ /g' | awk '{for(i=1;i<=NF;i++)sub(/./,toupper(substr($i,1,1)),$i)}1')
 
 # Use the option arguments in the command
-spring init --build=gradle -t=gradle-project -l=java -b=3.1.0 -g=com.example -a="$artifact" -n="$name" -d="$dependencies" -p=jar -j=17 -x "$name_project"
+spring init --build=maven -l=java -b=3.1.0 -g=com.example -a="$artifact" -n="$name" -d="$dependencies" -p=jar -j=17 -x "$name_project"
